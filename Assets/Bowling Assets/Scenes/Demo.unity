@@ -821,6 +821,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 752616902}
+  uiManager: {fileID: 1475873022}
 --- !u!1001 &456521375
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1219,7 +1220,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &633299081
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1309,6 +1310,7 @@ Transform:
   - {fileID: 221693677}
   - {fileID: 752616903}
   - {fileID: 421733950}
+  - {fileID: 1475873021}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &701267591
@@ -1365,7 +1367,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &735442697
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1454,6 +1456,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerController: {fileID: 221693676}
   scoreManager: {fileID: 421733951}
+  uiManager: {fileID: 1475873022}
   pins:
   - {fileID: 1352561031}
   - {fileID: 1002538618}
@@ -3521,6 +3524,55 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b83d7ae485d4a34abbcd23caf2d8729, type: 3}
+--- !u!1 &1475873020
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1475873021}
+  - component: {fileID: 1475873022}
+  m_Layer: 0
+  m_Name: UIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1475873021
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475873020}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 644700121}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1475873022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475873020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a6626aff5b78f94bbd6f0984a25a6ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frameHolder: {fileID: 900259526}
+  messageUIStrike: {fileID: 735442696}
+  messageUISpare: {fileID: 633299080}
+  gameOverUI: {fileID: 1099607128}
+  scoreText: {fileID: 2071498536}
 --- !u!1 &1477210009
 GameObject:
   m_ObjectHideFlags: 0
@@ -4076,7 +4128,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1681731615
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,6 +11,9 @@ public class GameManager : MonoBehaviour
     private ScoreManager scoreManager;
 
     [SerializeField]
+    private UIManager uiManager;
+
+    [SerializeField]
     private Pin[] pins;
 
     private bool isGamePlaying = false;
@@ -46,21 +49,23 @@ public class GameManager : MonoBehaviour
     }
 
     void NextThrow()
-    {
+    {   
+        int fallenPins = CalculateFallenPins();
+        scoreManager.SetFrameScore(fallenPins);
         if(scoreManager.currentFrame == 0)
         {
-            Debug.Log($"Game over {scoreManager.CalculateTotalScore()}");
+            uiManager.ShowGamerOver(scoreManager.CalculateTotalScore());
+            return;
         }
-        else
+        //Calculate frame total for UI
+        int frameTotal = 0;
+        for (int i = 0; i < scoreManager.currentFrame-1; i++)
         {
-            Debug.Log($"Frame: {scoreManager.currentFrame}, Throw: {scoreManager.currentThrow}");
-            scoreManager.SetFrameScore(CalculateFallenPins());
-            Debug.Log($"Current Score: {scoreManager.CalculateTotalScore()}");
-
-
+            frameTotal += scoreManager.GetFrameScores()[i];
+            uiManager.SetFrameTotal(i, frameTotal);
+        }
             //Get the ball to the start position for throwing
             playerController.StartThrow();
-        }
     }
     public int CalculateFallenPins()
     {

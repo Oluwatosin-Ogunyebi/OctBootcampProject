@@ -263,6 +263,11 @@ PrefabInstance:
       propertyPath: txtThrow3
       value: 
       objectReference: {fileID: 2570587630503688925}
+    - target: {fileID: 9046588452167538317, guid: 9b83d7ae485d4a34abbcd23caf2d8729,
+        type: 3}
+      propertyPath: isFinalFrame
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

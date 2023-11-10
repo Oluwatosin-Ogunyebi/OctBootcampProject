@@ -5,6 +5,8 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     private GameManager gameManager;
+
+    bool hasCollided = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,8 +24,9 @@ public class Ball : MonoBehaviour
         //Check for collision with ant object
         //Debug.Log("Ball has collided with " + collision.gameObject.name);
 
-        if (collision.gameObject.CompareTag("Pin"))
-        {
+        if (collision.gameObject.CompareTag("Pin") && !hasCollided)
+        {   
+            hasCollided = true;
             Debug.Log("The object we collided woith is " + collision.gameObject.name);
         }
     }
